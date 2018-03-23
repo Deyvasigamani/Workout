@@ -1,0 +1,13 @@
+footer {
+    clear: both;
+    position: fixed;
+    z-index: 10;
+    height: 3em;
+    background-color: #073642;
+    color: #839496;
+    text-align: center;
+    left:0;
+    bottom:0;
+    width:100%;
+   }
+  

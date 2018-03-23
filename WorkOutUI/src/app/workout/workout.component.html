@@ -1,0 +1,49 @@
+<div class="space">
+    <div id="logo"> 
+    
+        <h1>Add WorkOut</h1>
+      </div> 
+      <section class="stark-login">
+        
+          <form name="form" (ngSubmit)="f.form.valid && defineWorkout()" #f="ngForm" novalidate>	
+              <div id="fade-box">
+                  <div class="form-group" >
+                      <h5><label for="title" class="myLabel">Workout Title</label></h5>
+                <div class="form-group"> 
+               <select class="form-control bigSelect" placeholder="Workout Title" name="title" [(ngModel)]="workout.title" #title="ngModel" required >
+                  <option>Jumping Jacks</option>
+                  <option>Crunches</option>
+                  <option>Squats</option>
+                  <option>Push Ups</option>
+                  <option>Burpees</option>
+                  <option>Sit Ups</option>  
+              </select>
+              </div>
+               </div>
+               <div class="form-group" >
+                  <h5><label for="amountOfCalPerUnittime" class="myLabel">Amount Of Calories Burnt</label></h5>
+                  <input type="number" step ="0.01" name="calBurntPerUnitTime" id="calBurntPerUnitTime" class="form-control" [(ngModel)]="workout.calBurntPerUnitTime"  #calBurntPerUnitTime="ngModel" required />
+              </div>
+              <div class="form-group" >
+                  <h5><label for="unitTime" class="myLabel">UniTime</label></h5>
+                   <div class="form-group">
+              <select class="form-control bigSelect" name="unitTime" [(ngModel)]="workout.unitTime" #unitTime="ngModel" required >
+              <option>HOUR</option>
+              <option>MINUTE</option>
+              <option>SECOND</option>
+            </select>
+                  </div>
+              </div>
+               <button>Save</button> 
+                    <a class="white" [routerLink]="['/workoutList']" >Cancel</a>
+                  </div>
+                
+                </form>
+                  
+                    </section> 
+                    
+                    
+                  
+            </div>      
+                  
+                  
